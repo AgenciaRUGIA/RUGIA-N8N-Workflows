@@ -1,0 +1,97 @@
+{
+  "active": false,
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-10-02T13:48:11.676Z",
+  "id": "L7hc3hiSx9RL2IRE",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "CHAT BOT ERRORES TELEGRAM",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "2e18aca3-bfab-4c82-bcb9-e7401b61eb87",
+      "name": "Telegram Trigger",
+      "webhookId": "0cfd0b1a-1d59-47f5-8824-f94ca593aae9",
+      "credentials": {
+        "telegramApi": {
+          "id": "98KgyCazf2JGdYhB",
+          "name": "Telegram +34 622339254"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.message.chat.id }}",
+        "text": "=Eco: {{ $json.message.text }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        288,
+        0
+      ],
+      "id": "75d88241-1b8c-4b8a-baef-3689a5bcb832",
+      "name": "Telegram",
+      "webhookId": "dc1faf70-862a-4f50-8825-1f82c4a2e15d",
+      "credentials": {
+        "telegramApi": {
+          "id": "98KgyCazf2JGdYhB",
+          "name": "Telegram +34 622339254"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-10-02T13:48:11.682Z",
+      "updatedAt": "2025-10-02T13:48:11.682Z",
+      "role": "workflow:owner",
+      "workflowId": "L7hc3hiSx9RL2IRE",
+      "projectId": "46ckGhyzVQYKOUdU"
+    }
+  ],
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2025-09-27T09:30:40.558Z",
+      "updatedAt": "2025-09-27T09:30:40.558Z",
+      "id": "1S8qKMK0vRUGfz1H",
+      "name": "✅ Tests"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2025-10-02T13:49:14.000Z",
+  "versionId": "63cba1e0-1ae3-445a-888c-1921330ba626"
+}
